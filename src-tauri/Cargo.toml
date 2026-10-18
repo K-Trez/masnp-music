@@ -1,0 +1,23 @@
+[package]
+name = "project-1"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name"]
+description = "A Tauri v2 application with Svelte frontend"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2" }
+tauri-plugin-shell = "2"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[profile.dev]
+opt-level = 1
+
+[profile.release]
+opt-level = 3
+lto = true
+strip = true
