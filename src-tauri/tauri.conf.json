@@ -1,55 +1,35 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "project-1",
+  "productName": "temp_app",
   "version": "0.1.0",
-  "identifier": "com.project-1.app",
+  "identifier": "com.masnp.music",
   "build": {
-    "beforeBuildCommand": "npm run build",
     "beforeDevCommand": "npm run dev",
-    "devUrl": "http://localhost:5173",
-    "frontendDist": "../src"
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../build"
   },
   "app": {
     "windows": [
       {
-        "title": "project-1",
+        "title": "temp_app",
         "width": 800,
-        "height": 600,
-        "resizable": true,
-        "fullscreen": false,
-        "centered": true
+        "height": 600
       }
     ],
     "security": {
       "csp": null
-    },
-    "plugins": {
-      "shell": {
-        "open": true
-      },
-      "dialog": {
-        "all": true
-      },
-      "fs": {
-        "all": true
-      }
     }
   },
   "bundle": {
     "active": true,
-    "category": "DeveloperTool",
-    "copyright": "2024 Your Name",
+    "targets": "all",
     "icon": [
       "icons/32x32.png",
       "icons/128x128.png",
       "icons/128x128@2x.png",
       "icons/icon.icns",
       "icons/icon.ico"
-    ],
-    "windows": {
-      "certificateThumbprint": null,
-      "digestAlgorithm": "sha256",
-      "timestampUrl": ""
-    }
+    ]
   }
 }
